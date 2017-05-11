@@ -1,0 +1,146 @@
+/* Leaflet Map Widget */
+.leaflet-widget {
+  .leaflet-draw-edit-edit {
+    display: none;
+  }
+}
+
+
+/* Single Page Browse */
+
+//Add page breakpoints
+
+(min-width: @screen-md-min) {
+  
+}
+
+
+// Left Map
+.panels-flexible-new .panels-flexible-region-inside-first {
+  //Remove padding on right 
+  padding-right: 0px;
+}
+
+// Right column
+
+#single-browse-page-right-column {
+  background: #fff;
+
+  ul.quicktabs-tabs {
+    border-bottom: 1px solid @carbon;
+    li {
+      display: inline-block;
+      width: 72px;
+      text-align: center;
+      margin: 13px 8px 0;
+      &:hover {
+        border-bottom: 2px solid @carbon; 
+      }
+      &.active {
+        border-bottom: 2px solid @carbon; 
+      }
+      .first {
+          margin-left: 0;
+        }
+      .last {
+          margin-right: 0;
+      }
+    }
+  }
+
+  // Make right column height of viewport and scrollable
+  height:100vh;
+  overflow: scroll;
+
+  .pane-content {
+
+    // No padding
+    padding: 0;
+
+    // Items
+    .view-display-id-single_browse_page_dh_list {
+      .views-row {
+        border-bottom: 1px solid #ecebeb;
+        padding-bottom: 30px;
+      }
+    }
+
+    // Synced Items Higlight
+    .views-row.synced-marker-hover {
+      background-color: #d7e6f4;
+    }
+
+    // Filters
+
+    // Search
+    #views-exposed-form-digital-heritage-grid-list-single-browse-page-dh-list {
+      .views-exposed-widgets {
+        margin-bottom: 2em;
+      }
+      .views-widget-filter-search_api_views_fulltext {
+        float: none;
+      }
+      .views-exposed-widget {
+        .btn {
+          margin-top: 0em;
+        }
+      }
+    }
+
+    // Facets
+
+    // Original Year
+    #search-api-ranges-dh_original_year {
+
+      // Reformat the slider widget.
+      // This is taken from https://www.drupal.org/node/1999166, with some minor spacing font size changes.
+      .search-api-ranges-widget, .search-api-ranges-widget .range-box-left, .search-api-ranges-widget .range-box-right {
+        position: relative;
+      }
+      .search-api-ranges-widget .text-range {
+        display: none;
+      }
+      .search-api-ranges-widget .form-item-range-from input, .search-api-ranges-widget .form-item-range-to input {
+        float: left;
+        padding: 0;
+      }
+      .search-api-ranges-widget .form-submit {
+        display: none;
+      }
+      .search-api-ranges-widget .range-box-left .form-item, .search-api-ranges-widget .range-box-right .form-item {
+        margin-top: 0;
+      }
+      .search-api-ranges-widget .range-box-left, .search-api-ranges-widget .range-box-right {
+        position: absolute;
+        top: -30px;
+      }
+      .search-api-ranges-widget .range-box-left label, .search-api-ranges-widget .range-box-right label {
+        display: none;
+      }
+      .search-api-ranges-widget .range-box-left {
+        left: 0;
+      }
+      .search-api-ranges-widget .range-box-right {
+        right: 0;
+      }
+      .search-api-ranges-widget .range-box-right .form-item-range-to input {
+        text-align: right;
+      }
+      .search-api-ranges-widget .range-slider-box {
+        display: block;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+      }
+      .search-api-ranges-widget .form-item-range-from input, .search-api-ranges-widget .form-item-range-to input {
+        background: none repeat scroll 0 0 transparent;
+        border: none;
+        box-shadow: none;
+        width: auto;
+      }
+
+    }
+
+  }
+
+}

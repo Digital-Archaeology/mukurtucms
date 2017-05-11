@@ -1,0 +1,229 @@
+//// Kivalina global variables ////
+
+// Colors //
+@electric-blue: #3869B2;
+@flag-red: #F15F4D;
+@carbon: #838286;
+@frost: #DBE6F5;
+@concrete: #DDD;
+
+@brand-primary:         @flag-red;
+@brand-success:         #68D8A8;
+@brand-info:            #2BB5F9;
+@brand-warning:         #F9B00D;
+@brand-danger:          #A03548;
+
+@text-color:            @carbon;
+
+
+// Fonts //
+@font-family-sans-serif:  "MuseoSans-300", Helvetica, Arial, sans-serif;
+@font-family-heading:	  "MuseoSans-700", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Adobe-Garamond-Pro", "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@font-family-base:        @font-family-serif;
+
+body {
+	font-size: 16px;
+}
+
+// Headings //
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+	font-family: @font-family-heading;
+	color: @carbon;
+}
+
+@font-size-h1:            27px;
+@font-size-h2:            20px;
+@font-size-h3:            17px;
+@font-size-h4:            12px;
+
+
+
+#single-browse-page-right-column {
+	ul.quicktabs-tabs {
+		border-bottom: 1px solid @concrete;
+		padding: 5px 0 0;
+	    li {
+	    	a {
+				text-transform: uppercase;
+				font-family: @font-family-sans-serif;
+				font-size: 12px;
+				color: @carbon;
+				padding: 0 4px;
+	    	}
+		    &:hover {
+		    	border-bottom: 2px solid @carbon;
+		    }
+		    &.active {
+		    	border-bottom: 2px solid @carbon;
+		    }
+			&.first {
+	    		margin-left: 0;
+	    	}
+	    	&.last {
+	    		margin-right: 0;
+	    	}
+	    }
+	}
+	.field-name-title {
+		h2 {
+			font-family: MuseoSans-700, @font-family-sans-serif;
+			font-size: 17px;
+			color: #838286;
+			letter-spacing: 0.63px;
+			text-transform: uppercase;
+	        color: @carbon;
+		}
+	}
+}
+
+#ma-single-browse-page-dh-list-sort-form {
+	.form-control {
+		width: 30%;
+		margin-top: -40px;
+		float: right;
+		border: none;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: @flag-red;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-family: @font-family-sans-serif;
+	}
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+	border-bottom: 2px solid @flag-red;
+    border: none;
+    background: none;
+    a {
+      color: @flag-red;
+      border-bottom: 2px solid @flag-red;
+    }
+}
+
+/// remove padding restriction on navbar ///
+
+@media (min-width: 768px) {
+	.navbar-collapse.collapse {
+		padding-bottom: 20px;
+	}
+}
+
+/// remove margin below navbar ///
+.navbar {
+	margin-bottom: 0;
+	.logo {
+		margin: 0 22px;
+	}
+}
+
+/// style changes to navbar ///
+
+.navbar-bottom {
+  border:none;
+  border-radius:0;
+  background: none;
+  padding: 20px 20px 0 !important;
+  margin-top: 0;
+  ul.nav {
+  	float: left;
+  	margin-top: 0;
+    li {
+      background: none;
+      border: none;
+      border-radius: 0;
+      margin: 0 10px;
+      a {
+        text-transform: uppercase;
+        color: @carbon;
+        padding: 2px 22px 22px;
+        font-size: 18px;
+		font-family: 'MuseoSans-700', @font-family-sans-serif;
+		letter-spacing: 0.63px;
+      }
+      &.active {
+        border: none;
+        border-bottom: 2px solid @flag-red !important;
+        background: none;
+        a {
+	        color: @flag-red;
+	    }
+      }
+      &:hover {
+        border: none;
+        border-bottom: 2px solid @flag-red !important;
+        background: none;
+        a {
+	        color: @flag-red;
+	    }
+      }
+    }
+  }
+}
+
+#navbar {
+  background:@concrete;
+}
+
+// Search Form
+
+form {
+  #edit-search-text-wrapper {
+  	width: 80%;
+  	padding: 0;
+  	float: left;
+    .form-control {
+      border: 1px solid @concrete;
+      border-radius: 0;
+      box-shadow: none;
+      	-moz-box-shadow: none;
+      	-webkit-box-shadow: none;
+    }
+  }
+  .form-submit {
+    background: url("../img/search.png") 0 0 no-repeat;
+    border: 1px solid @flag-red;
+    //display: inline;
+    //float: right;
+    position: absolute;
+    right: 0;
+    height: auto;
+    //margin-top: 5px !important;
+    //padding-top: 25px;
+    overflow: hidden;
+    width: 15%;
+    &:hover {
+      background-position: -50px 0;
+    }
+  }  
+//  .views-exposed-widget.views-reset-button {
+  //  position: absolute;
+    //top: -40px;
+    //right: 0;
+    // The below is for the reset icon- no time left in budget to finish
+    //.form-submit {
+      //background: url("../img/search.png") 0 -37px no-repeat;
+      //background:none;
+      //border: none;
+      //box-shadow: none;
+      //  -moz-box-shadow: none;
+      //  -webkit-box-shadow: none;
+      //display: block;
+      //height: 0;
+      //margin-top: 5px !important;
+      //margin-right: 5px;
+      //padding-top: 20px;
+      //overflow: hidden;
+      //width: 25px;
+
+      //padding:0;
+      //text-transform: uppercase;
+      //letter-spacing: .5px;
+    //}  
+  //}
+}
